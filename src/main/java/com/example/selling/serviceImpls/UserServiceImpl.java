@@ -38,7 +38,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public void validateNewRegistration(User user) {
         if (isNotUnique(user)) {
-            throw new BadRequestException(String.format("User with email '%s' or phone number '%s' or national id '%s' already exists", user.getEmail(), user.getPhoneNumber()));
+            throw new BadRequestException(String.format("User with email '%s' or phone number '%s' already exists", user.getEmail(), user.getPhoneNumber()));
         }
     }
 

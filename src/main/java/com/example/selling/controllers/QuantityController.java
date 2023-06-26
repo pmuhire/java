@@ -25,11 +25,5 @@ public class QuantityController {
         QuantityDTO savedQuantity = quantityService.registerQuantity(quantityDTO);
         return new ResponseEntity<>(savedQuantity, HttpStatus.CREATED);
     }
-
-    @GetMapping
-    public ResponseEntity<List<QuantityDTO>> getAllQuantities() {
-        List<QuantityDTO> quantities = quantityService.getAllQuantities();
-        return new ResponseEntity<>(quantities, HttpStatus.OK);
-    }
 }
 
